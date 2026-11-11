@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legadima Wilson</title>
+    <title>Legadima Wilson | Full-Stack Developer &amp; Computer Science Student</title>
+    <meta name="description" content="Legadima Wilson: Wits Computer Science student, full-stack developer and academic tutor. Explore Language Intelligence, Neon Rush, CareQueue and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -473,10 +474,12 @@
             border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
-        .tech-link {
+        .tech-link, .project-links a.tech-link {
             background: rgb(101, 71, 170);
             color: white;
             padding: 0.3rem 0.8rem;
+            min-height: auto;
+            text-decoration: none;
             border-radius: 15px;
             font-size: 0.85rem;
             border: 1px solid rgba(116, 10, 151, 0.2);
@@ -896,6 +899,19 @@
                 margin-bottom: 1rem;
             }
         }
+    
+        /* Project updates: responsive cards and accessible detail dialogs. */
+        .projects-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+        .project-buttons { flex-wrap: wrap; }
+        .project-links { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.2rem 0 0; }
+        .project-links a { display: inline-flex; align-items: center; min-height: 44px; padding: .55rem .85rem; border: 1px solid var(--accent); border-radius: 8px; color: var(--text-primary); text-decoration: none; font-size: .9rem; }
+        .project-links a:hover { background: var(--accent); color: #fff; }
+        .project-eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; font-weight: 700; }
+        #projectModal #modalDetails { line-height: 1.75; }
+        #projectModal .modal-content { padding: 2.5rem 2rem 2rem; }
+        a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+        @media (max-width: 480px) { .project-content { padding: 1.5rem; } #projectModal .modal-content { padding: 3rem 1.25rem 1.5rem; } }
+
     </style>
 </head>
 <body>
@@ -928,7 +944,7 @@
             <p class="tagline">Software Engineer | Tutor | Web Developer</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="./Documents/LatestCV.pdf" class="btn btn-outline" download id="downloadCV">Download CV</a>
+                <a href="./Documents/Legadima_Wilson_CV_2026_Updated.pdf" class="btn btn-outline" download id="downloadCV">Download CV</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
                 <a href="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/03/02/22/20260302220944-PEE0XOEB.json" class="btn btn-primary">Ask AI About Me✨ </a>
                  
@@ -948,7 +964,7 @@
 
                 <div class="about-text">
                     <p>
-                       I am an aspiring Software Engineer currently studying Computer Science at the University of the Witwatersrand. I have hands-on experience building full-stack web applications using PHP, JavaScript, SQL, and Java. I enjoy solving real-world problems through technology and have developed systems such as a bursary networking platform and a clinic queue management system. I am a fast learner with strong problem-solving skills and a passion for building impactful, user-friendly applications. I am currently seeking opportunities to grow, collaborate, and apply my skills in real-world environments.
+                       I am a Computer Science student and academic tutor at the University of the Witwatersrand, graduating in February 2027. I build full-stack applications with React, TypeScript, Node.js, PHP and SQL. My recent work includes assessment and notification features for Language Intelligence, alongside Blender environment development for Neon Rush. I am seeking software engineering and full-stack internship or graduate opportunities.
                     </p>
                 </div>
             </div>
@@ -962,8 +978,9 @@
 
             <div class="slideshow text-center">
 
-                <h2 class="fw-bold"> 2024 VC Equality Scholarship Recipient</h2>
-                <p>Recognised as a top-performing student from a rural school</p>
+                <h2 class="fw-bold">🏆 2024 VC Equality Scholarship Recipient</h2>
+                <p class="text-center">Recognised as a top-performing student from a rural school</p>
+               
 
                 <div class="carousel-container">
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -1041,6 +1058,7 @@
                         <span class="skill-tag">HTML</span>
                         <span class="skill-tag">CSS</span>
                         <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
                         <span class="skill-tag">PHP</span>
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">SQL</span>
@@ -1050,9 +1068,9 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h3>Technical</h3>
+                    <h3>Frameworks &amp; Tools</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">React</span><span class="skill-tag">Node.js / Express</span><span class="skill-tag">Prisma</span><span class="skill-tag">Supabase / PostgreSQL</span><span class="skill-tag">Firebase</span><span class="skill-tag">Docker</span><span class="skill-tag">Blender</span><span class="skill-tag">Web Development</span>
                         <span class="skill-tag">Databases</span>
                         <span class="skill-tag">Git & GitHub</span>
                         <span class="skill-tag">Debugging & Testing</span>
@@ -1067,7 +1085,7 @@
                         <span class="skill-tag">Communication</span>
                         <span class="skill-tag">Problem Solving</span>
                         <span class="skill-tag">Critical Thinking</span>
-                        <span class="skill-tag">I Am Smart</span>
+                        <span class="skill-tag">Technical Tutoring</span>
                     </div>
                 </div>
             </div>
@@ -1079,6 +1097,28 @@
             <h2 class="section-title">Projects</h2>
             <h2 class="fw-bold text-center">“Building solutions that make real-world impact through technology.”</h2>
             <div class="projects-grid">
+                <article class="project-card" data-project="sphinx">
+                    <div class="project-content">
+                        <p class="project-eyebrow">New project · 2026</p>
+                        <h3>Language Intelligence (Sphinx / LQ)</h3>
+                        <p>A community language-learning platform with courses, assessments, conversation spaces and notifications.</p>
+                        <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">Prisma</span><span class="tech-tag">Supabase</span><span class="tech-tag">PostgreSQL</span><a style="text-decoration: none;" class="tech-link" href="https://sphinx-4vf.pages.dev" target="_blank" rel="noopener noreferrer"><i class="ri-links-line" aria-hidden="true"></i> Visit The App</a></div>
+                        <div class="project-buttons"><button class="btn btn-primary view-details" aria-label="View Language Intelligence (Sphinx / LQ) details">View Details</button></div>
+                        <div class="project-links" aria-label="Language Intelligence (Sphinx / LQ) links"><a href="https://main.lq-docs-b19.pages.dev" target="_blank" rel="noopener noreferrer">Documentation</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-project="neonrush">
+                    <div class="project-content">
+                        <p class="project-eyebrow">New project · 2026</p>
+                        <h3>Neon Rush</h3>
+                        <p>A 3D browser racing game. My contribution: building the game environment in Blender.</p>
+                        <div class="project-tech"><span class="tech-tag">Blender</span><span class="tech-tag">Three.js</span><span class="tech-tag">Rapier</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Vite</span><a style="text-decoration: none;" class="tech-link" href="https://phoenix-cgv.github.io/neon-rush/" target="_blank" rel="noopener noreferrer"><i class="ri-links-line" aria-hidden="true"></i> Visit Game to Play</a></div>
+                        <div class="project-buttons"><button class="btn btn-primary view-details" aria-label="View Neon Rush details">View Details</button></div>
+                        <div class="project-links" aria-label="Neon Rush links"><a href="https://github.com/phoenix-cgv/neon-rush" target="_blank" rel="noopener noreferrer">GitHub repository</a></div>
+                    </div>
+                </article>
+
                 
                 <div class="project-card" data-project="bursary">
                     <div class="project-content">
@@ -1205,8 +1245,8 @@
 
                      <div class="contact-item link-icons">
                         
-                        <a href="https://www.bing.com/ck/a?!&&p=73d28fa1436cc64b23315eac9b5b77bb81e3aecdc3b8136ea4037f3b649262b3JmltdHM9MTc3MTQ1OTIwMA&ptn=3&ver=2&hsh=4&fclid=01853e5e-b3ad-64ce-187a-2a45b2a865cc&psq=wilson+legadima&u=a1aHR0cHM6Ly96YS5saW5rZWRpbi5jb20vaW4vd2lsc29uLWxlZ2FkaW1hLTg4MjMyOTM3MQ"><img src="./png/linkedin.png" alt=""></a>
-                        <a href="https://www.bing.com/ck/a?!&&p=ced5a214163c99edafab775222c547fecfbf620de4fd8df5fc2e3e576eb2c428JmltdHM9MTc3MTQ1OTIwMA&ptn=3&ver=2&hsh=4&fclid=01853e5e-b3ad-64ce-187a-2a45b2a865cc&psq=LegadimaW&u=a1aHR0cHM6Ly9naXRodWIuY29tL0xlZ2FkaW1hVy9MYWIy"><img src="./png/github-sign.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/wilson-legadima-882329371/"><img src="./png/linkedin.png" alt=""></a>
+                        <a href="https://github.com/LegadimaW"><img src="./png/github-sign.png" alt=""></a>
                         <a href="https://www.bing.com/ck/a?!&&p=5464ee6d73a9db2cbb99dbe47a4a16e6bc2768125a4112ce306ccea51c68db21JmltdHM9MTc3MTQ1OTIwMA&ptn=3&ver=2&hsh=4&fclid=01853e5e-b3ad-64ce-187a-2a45b2a865cc&psq=wilson+legadima&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9sZWdhZGltYXcv"><img src="./png/instagram.png" alt=""></a>
                         <a href="https://www.bing.com/ck/a?!&&p=6585eccb32275e3385e274408696aa35a5a6a54241295c70128ee94a49d570d1JmltdHM9MTc3MTQ1OTIwMA&ptn=3&ver=2&hsh=4&fclid=01853e5e-b3ad-64ce-187a-2a45b2a865cc&psq=wilson+legadima&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3dpbHNvbi5sZWdhZGltYS9waG90b3NfYWxidW1zLw"><img src="./png/facebook.png" alt=""></a>     
                         
@@ -1274,13 +1314,14 @@
 
     <button class="back-to-top" id="backToTop">↑</button>
 
-    <div class="modal" id="projectModal">
+    <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" aria-hidden="true">
         <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
+            <button class="modal-close" id="modalClose" aria-label="Close project details">&times;</button>
             <h2 id="modalTitle"></h2>
             <p id="modalDescription"></p>
             <div class="project-tech" id="modalTech"></div>
             <div id="modalDetails"></div>
+            <div class="project-links" id="modalLinks"></div>
         </div>
     </div>
 
@@ -1307,6 +1348,9 @@
 
     <script>
         const projectData = {
+            sphinx: {"title": "Language Intelligence (Sphinx / LQ)", "description": "A community language-learning platform with courses, assessments, conversation spaces and notifications.", "tech": ["React", "TypeScript", "Node.js", "Express", "Prisma", "Supabase", "PostgreSQL"], "details": "In a six-person team, I implemented assessment creation and management, learner answer submission, and notification features. I added repository, CRUD and validation tests, count-only and bulk mark-read endpoints, and refresh coordination to prevent overlapping requests. For ten unread notifications, bulk marking reduces ten update requests to one. I also created the initial client, backend and Docker CI workflows. The platform uses an API gateway and nine backend services.", "links": [{"label": "Visit The App", "url": "https://sphinx-4vf.pages.dev", "visit": true}, {"label": "Documentation", "url": "https://main.lq-docs-b19.pages.dev"}]},
+            neonrush: {"title": "Neon Rush", "description": "A 3D browser racing game. My contribution: building the game environment in Blender.", "tech": ["Blender", "Three.js", "Rapier", "JavaScript", "Vite"], "details": "I built the game environment in Blender as part of the Neon Rush team. The game uses Three.js for 3D rendering, Rapier for physics and Vite for development and builds. My contribution focuses on the environment; the rendering and physics technologies describe the wider team project.", "links": [{"label": "Visit Game to Play", "url": "https://phoenix-cgv.github.io/neon-rush/", "visit": true}, {"label": "GitHub repository", "url": "https://github.com/phoenix-cgv/neon-rush"}]},
+
             lendahand: {
                 title: "Lend A Hand",
                 description: "A comprehensive donation management system that connects donors with receivers, facilitating charitable giving and community support.",
@@ -1328,7 +1372,7 @@
             carequeue: {
                 title: "CareQueue",
                 description: "Web-based appointment and queue management system for community clinics, enabling real-time patient tracking and efficient clinic operations.",
-                tech: ["PHP", "SQL", "JavaScript", "HTML/CSS", "Tailwind CSS"],
+                tech: ["JavaScript", "Firebase", "Firestore", "Python", "Flask", "Jest"],
                 details: "CareQueue is designed to reduce overcrowding in South African community clinics by allowing patients to book, reschedule, or cancel appointments and join virtual queues. The system provides real-time updates on queue position and estimated wait times, with notifications when a patient’s turn is approaching. Clinic staff can manage daily queues, update patient statuses (Waiting, In Consultation, Complete), and handle walk-ins efficiently. Admins can manage clinic details, operating hours, services, and staff availability. The platform also integrates real South African health facility data for clinic search and includes analytics dashboards such as average wait times, no-show rates, and custom reports, with export options in CSV and PDF."
             }
         };
@@ -1457,44 +1501,56 @@
 
         const modal = document.getElementById('projectModal');
         const modalClose = document.getElementById('modalClose');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        projectCards.forEach(card => {
-            const viewDetailsBtn = card.querySelector('.view-details');
-            viewDetailsBtn.addEventListener('click', () => {
-                const projectId = card.getAttribute('data-project');
-                const project = projectData[projectId];
-
+        let lastProjectTrigger = null;
+        function closeProjectModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            lastProjectTrigger?.focus();
+        }
+        document.querySelectorAll('.project-card').forEach(card => {
+            const button = card.querySelector('.view-details');
+            button?.addEventListener('click', () => {
+                const project = projectData[card.dataset.project];
+                if (!project) return;
+                lastProjectTrigger = button;
                 document.getElementById('modalTitle').textContent = project.title;
                 document.getElementById('modalDescription').textContent = project.description;
-
-                const modalTech = document.getElementById('modalTech');
-                modalTech.innerHTML = '';
-                project.tech.forEach(tech => {
+                const tags = document.getElementById('modalTech');
+                tags.replaceChildren(...project.tech.map(tech => {
                     const tag = document.createElement('span');
-                    tag.className = 'tech-tag';
-                    tag.textContent = tech;
-                    modalTech.appendChild(tag);
-                });
-
+                    tag.className = 'tech-tag'; tag.textContent = tech; return tag;
+                }));
                 document.getElementById('modalDetails').textContent = project.details;
-
+                const links = document.getElementById('modalLinks');
+                links.replaceChildren(...(project.links || []).map(item => {
+                    const link = document.createElement('a');
+                    link.href = item.url;
+                    if (item.visit) {
+                        link.className = 'tech-link';
+                        const icon = document.createElement('i');
+                        icon.className = 'ri-links-line'; icon.setAttribute('aria-hidden', 'true');
+                        link.append(icon, document.createTextNode(' ' + item.label));
+                    } else { link.textContent = item.label; }
+                    link.target = '_blank'; link.rel = 'noopener noreferrer'; return link;
+                }));
                 modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                modalClose.focus();
             });
         });
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
+        modalClose.addEventListener('click', closeProjectModal);
+        modal.addEventListener('click', event => { if (event.target === modal) closeProjectModal(); });
+        modal.addEventListener('keydown', event => {
+            if (event.key === 'Escape') { event.preventDefault(); closeProjectModal(); }
+            if (event.key === 'Tab') {
+                const focusable = [...modal.querySelectorAll('button, a[href]')];
+                const first = focusable[0], last = focusable[focusable.length - 1];
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
             }
         });
-
-       
-       
 
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('home').classList.add('visible');
